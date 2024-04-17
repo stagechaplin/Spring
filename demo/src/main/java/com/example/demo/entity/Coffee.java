@@ -13,7 +13,8 @@ import lombok.ToString;
 @Getter
 public class Coffee {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "coffee_sq")
+    @SequenceGenerator(name="coffee_sq",sequenceName = "coffee_sq",initialValue = 1,allocationSize = 1)
     private Long id;
     @Column
     private String name;
