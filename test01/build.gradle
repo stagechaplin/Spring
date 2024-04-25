@@ -21,6 +21,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+
+	compileOnly'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	//타임리프 의존성(머스타치 템플릿을 상용시 충돌이 일어나 사용이 안됨)
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
 
 tasks.named('bootBuildImage') {
